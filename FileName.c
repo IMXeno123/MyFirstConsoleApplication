@@ -50,3 +50,13 @@ int array_() {
 	}
 	return 0;
 }
+
+int divison() {
+	int a = 7;
+	a = -a;
+	int b = 2;
+	int c = a % b;
+	c += a;
+	wprintf(L"%d", c);
+	return c;
+}
