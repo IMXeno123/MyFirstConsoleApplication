@@ -10,7 +10,8 @@ int main() {
 	system("chcp 65001");
 	setlocale(LC_ALL, "chs"); 
 	//??
-
+	int array_();
+	array_();
 	return 0;
 };
 
