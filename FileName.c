@@ -8,11 +8,10 @@
 
 int main() {
 	system("chcp 65001");
-	setlocale(LC_ALL, "chs"); 
+	setlocale(LC_ALL, "chs");
 	//??
-	int morethan();
-	int r = morethan();
-	printf("%d", r);
+	void jsys();
+	jsys();
 	return 0;
 };
 
@@ -70,4 +69,13 @@ int morethan() {
 	int* p1, * p2, * p3 = (& a, & a, & a);
 	printf("%zu\n", sizeof(char*));
 	return r;
+}
+
+void jsys() {
+	int a = 0;
+	int b = 0;
+	int c = scanf("%d %d", &a, &b);
+	int j = a / b;
+	int i = a % b;
+	printf("%d  %d", j, i);
 }
