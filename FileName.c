@@ -64,7 +64,10 @@ int divison() {
 
 int morethan() {
 	int a = 10;
-	int b = 20;
+	int* q = &a;
+	int b = *q;
 	int r = a > b ? a : b;
+	int* p1, * p2, * p3 = (& a, & a, & a);
+	printf("%zu\n", sizeof(char*));
 	return r;
 }
