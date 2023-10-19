@@ -10,8 +10,9 @@ int main() {
 	system("chcp 65001");
 	setlocale(LC_ALL, "chs"); 
 	//??
-	int array_();
-	array_();
+	int morethan();
+	int r = morethan();
+	printf("%d", r);
 	return 0;
 };
 
@@ -42,13 +43,13 @@ int add(int x, int y) {
 	return x + y;
 }
 
-int array_() {
+void array_() {
 	int arr[] = {0,1,2,3,4,5,6,7,8,9};
 	int i;
-	for (i = 0; i < (sizeof(arr) / 4); i++) {
+	for (i = 0; i < (sizeof(arr) / sizeof(arr[0])); i++) {
 		printf("%d\n", arr[i]);
 	}
-	return 0;
+
 }
 
 int divison() {
@@ -59,4 +60,11 @@ int divison() {
 	c += a;
 	wprintf(L"%d", c);
 	return c;
+}
+
+int morethan() {
+	int a = 10;
+	int b = 20;
+	int r = a > b ? a : b;
+	return r;
 }
