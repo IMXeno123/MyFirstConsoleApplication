@@ -10,8 +10,8 @@ int main() {
 	system("chcp 65001");
 	setlocale(LC_ALL, "chs");
 	//??
-	void jsys();
-	jsys();
+	void getcharr();
+	getcharr();
 	return 0;
 };
 
@@ -66,7 +66,7 @@ int morethan() {
 	int* q = &a;
 	int b = *q;
 	int r = a > b ? a : b;
-	int* p1, * p2, * p3 = (& a, & a, & a);
+	//int* p1, * p2, * p3 = (& a, & a, & a);
 	printf("%zu\n", sizeof(char*));
 	return r;
 }
@@ -77,5 +77,44 @@ void jsys() {
 	int c = scanf("%d %d", &a, &b);
 	int j = a / b;
 	int i = a % b;
-	printf("%d  %d", j, i);
+	printf("%d  %d\n", j, i);
+	printf("%d", c);
+}
+
+void ifsentence() {
+	if (3 == 5) {
+		printf("shit");
+	}
+	else if (5 == 5) {
+		printf("eee");
+	}
+	else {
+		printf("hehe");
+	}
+}
+
+void whileloop() {
+	int i = 0;
+	while (i<100) {
+		i++;
+		printf("%d ", i);
+	}
+}
+
+void getcharr() {
+	char password[20] = { 0 };
+	printf("input your password: ");
+	int a = scanf("%s", password);
+	int ch = '\0';
+	while ((ch = getchar()) != '\n') {
+		;
+	}
+	printf("Y/N: ");
+	int ret = getchar();
+	if ('Y' == ret) {
+		printf("Yes");
+	}
+	else {
+		printf("No");
+	}
 }
