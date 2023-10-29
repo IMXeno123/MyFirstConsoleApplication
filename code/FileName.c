@@ -148,7 +148,7 @@ void zsoutput() {
 	//int j = scanf("%d %d %d %d", &a ,&b, &c, &d);
 	int arr[4] = { 0 };
 	for (int i = 0;i < 4;i++) {
-		scanf("%d", &arr[i]);
+		int a = scanf("%d", &arr[i]);
 	}
 	int max = arr[0];
 	for (int i = 0;i < (sizeof(arr) / sizeof(arr[0]));i++) {
