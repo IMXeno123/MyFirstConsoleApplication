@@ -10,8 +10,8 @@ int main() {
 	system("chcp 65001");
 	setlocale(LC_ALL, "chs");
 	//??
-	void getcharr();
-	getcharr();
+	void zsoutput();
+	zsoutput();
 	return 0;
 };
 
@@ -117,4 +117,44 @@ void getcharr() {
 	else {
 		printf("No");
 	}
+}
+
+void srtm() {
+	int year = 0;
+	int month = 0;
+	int day = 0;
+	int a = scanf("%4d%2d%2d", &year, &month, &day);
+	printf("year=%d\n", year);
+	printf("month=%02d\n", month);
+	printf("day=%02d\n", day);
+}
+
+void xscjoutput() {
+	int id = 0;
+	float c = 0.0f;
+	float math = 0.0f;
+	float english = 0.0f;
+	int a = scanf("%d;%f,%f,%f", &id, &c, &math, &english);
+	int b = printf("Id of %d is %.2f %.2f %.2f", id, c, math, english);
+	printf("\n%d", b);
+
+}
+
+void zsoutput() {
+	//int a = 0;
+	//int b = 0;
+	//int c = 0;
+	//int d = 0;
+	//int j = scanf("%d %d %d %d", &a ,&b, &c, &d);
+	int arr[4] = { 0 };
+	for (int i = 0;i < 4;i++) {
+		scanf("%d", &arr[i]);
+	}
+	int max = arr[0];
+	for (int i = 0;i < (sizeof(arr) / sizeof(arr[0]));i++) {
+		if (arr[i] > max) {
+			max = arr[i];
+		}
+	}
+	printf("%d", max);
 }
