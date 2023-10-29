@@ -10,8 +10,8 @@ int main() {
 	system("chcp 65001");
 	setlocale(LC_ALL, "chs");
 	//??
-	void zsoutput();
-	zsoutput();
+	void login();
+	login();
 	return 0;
 };
 
@@ -154,7 +154,54 @@ void zsoutput() {
 	for (int i = 0;i < (sizeof(arr) / sizeof(arr[0]));i++) {
 		if (arr[i] > max) {
 			max = arr[i];
+			Sleep(1000);
 		}
 	}
 	printf("%d", max);
+}
+
+void paoma()
+{
+	//char arr1[] = "welcome to bitt!!!!";
+	//char arr2[] = "###################";
+	//int left = 0;
+	//int right = strlen(arr2) - 1;
+	//while (left <= right)
+	//{
+	//	arr2[left] = arr1[left];
+	//	arr2[right] = arr1[right];
+	//	printf("%s\n", arr2);
+	//	Sleep(1000);
+	//	system("cls");
+	//	left++;
+	//	right--;
+	//}
+	;
+}
+
+void login()
+{
+	char pw[20] = "123456";
+	char npw[20] = { 0 };
+	for (int i = 0;i < 3;i++)
+	{
+		printf("please input the password: ");
+		int a = scanf("%s", npw);
+		if (strcmp(npw,pw) == 0)
+		{
+			printf("success\n");
+			break;
+		}
+		else
+		{
+			printf("fail\n"); 
+			if (i == 2)
+			{
+				printf("\nfuck!\n");
+
+			}
+		}
+	}
+
+
 }
