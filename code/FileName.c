@@ -5,13 +5,24 @@
 #include <wchar.h>
 #include <windows.system.h>
 
+struct my_swap
+{
+	int x;
+	int y;
+};
 
 int main() {
 	system("chcp 65001");
 	setlocale(LC_ALL, "chs");
 	//??
-	void login();
-	login();
+	int a = 0;
+	int b = 0;
+	int c = scanf("%d %d", &a, &b);
+	struct my_swap swap();
+	struct my_swap d = swap(a, b);
+	a = d.x;
+	b = d.y;
+	printf("%d %d\n", a, b);
 	return 0;
 };
 
@@ -204,4 +215,58 @@ void login()
 	}
 
 
+}
+
+//char input(char *s)
+//{
+//	printf("%s\n", s);
+//	char str[] = { 0 };
+//	int a = scanf("%s", str);
+//	return str;
+//}
+
+//char** print_string(char *s)
+//{
+//	printf("%s\n", s);
+//	char str[] = { 0 };
+//	int a = scanf("%s", str);
+//	return str;
+//}
+
+void gotot()
+{
+	printf("fuck you\n");
+	int i = 0;
+again:
+	printf("yeah daddy\n");
+	i++;
+
+	if (i < 3)
+	{
+		goto again;
+	}
+
+}
+
+int getmax(int a, int b)
+{
+	if (a > b)
+	{
+		printf("%d\n", a);
+		return a;
+	}
+	else
+	{
+		printf("%d\n", b);
+		return b;
+	}
+}
+
+struct my_swap swap(int x, int y)
+{
+	struct my_swap p;
+	int j = x;
+	p.x = y;
+	p.y = j;
+	return p;
 }
