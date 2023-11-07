@@ -4,26 +4,12 @@
 #include <locale.h>
 #include <wchar.h>
 #include <windows.system.h>
+#include <stdbool.h>
 
 struct my_swap
 {
 	int x;
 	int y;
-};
-
-int main() {
-	system("chcp 65001");
-	setlocale(LC_ALL, "chs");
-	//??
-	int a = 0;
-	int b = 0;
-	int c = scanf("%d %d", &a, &b);
-	struct my_swap swap();
-	struct my_swap d = swap(a, b);
-	a = d.x;
-	b = d.y;
-	printf("%d %d\n", a, b);
-	return 0;
 };
 
 int test() {
@@ -270,3 +256,26 @@ struct my_swap swap(int x, int y)
 	p.y = j;
 	return p;
 }
+
+bool is_prime(int n) {
+	int j = 0;
+	for (j = 2;j <= sqrt(n);j++) {
+		return false;
+	}
+	return true;
+}  
+
+int main() {
+	system("chcp 65001");
+	setlocale(LC_ALL, "chs");
+	//??
+	int a = 0;
+	int b = 0;
+	int c = scanf("%d %d", &a, &b);
+	struct my_swap swap();
+	struct my_swap d = swap(a, b);
+	a = d.x;
+	b = d.y;
+	printf("%d %d\n", a, b);
+	return 0;
+};
