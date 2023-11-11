@@ -5,6 +5,7 @@
 #include <wchar.h>
 #include <windows.system.h>
 #include <stdbool.h>
+#include <math.h>
 
 struct my_swap
 {
@@ -260,22 +261,25 @@ struct my_swap swap(int x, int y)
 bool is_prime(int n) {
 	int j = 0;
 	for (j = 2;j <= sqrt(n);j++) {
-		return false;
+		if (n % j == 0) {
+			return false;
+		}
 	}
 	return true;
 }  
+
+void add_one(int* num) {
+	*num = *num + 1;
+}
 
 int main() {
 	system("chcp 65001");
 	setlocale(LC_ALL, "chs");
 	//??
-	int a = 0;
-	int b = 0;
-	int c = scanf("%d %d", &a, &b);
-	struct my_swap swap();
-	struct my_swap d = swap(a, b);
-	a = d.x;
-	b = d.y;
-	printf("%d %d\n", a, b);
+	int i = 0;
+	add_one(&i);
+	printf("%d\n", i);
+	add_one(&i);
+	printf("%d\n", i);
 	return 0;
 };
