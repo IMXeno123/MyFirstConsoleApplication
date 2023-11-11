@@ -6,6 +6,7 @@
 #include <windows.system.h>
 #include <stdbool.h>
 #include <math.h>
+#include "../add.h"
 
 struct my_swap
 {
@@ -36,9 +37,9 @@ int test() {
 	return 1;
 } 
 
-int add(int x, int y) {
-	return x + y;
-}
+//int add(int x, int y) {
+//	return x + y;
+//}
 
 void array_() {
 	int arr[] = {0,1,2,3,4,5,6,7,8,9};
@@ -276,10 +277,10 @@ int main() {
 	system("chcp 65001");
 	setlocale(LC_ALL, "chs");
 	//??
-	int i = 0;
-	add_one(&i);
-	printf("%d\n", i);
-	add_one(&i);
-	printf("%d\n", i);
+	printf("%d", 43);
+	if (is_prime(101)) {
+		printf("yes\n");
+	}
+	printf("%d", Add(5, 6));
 	return 0;
 };

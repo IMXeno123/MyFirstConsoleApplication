@@ -18,5 +18,13 @@
     <ClCompile Include="code\FileName.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="code\add.c">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="code\add.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

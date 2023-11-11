@@ -19,7 +19,11 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="code\add.c" />
     <ClCompile Include="code\FileName.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="code\add.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
