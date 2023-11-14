@@ -6,7 +6,7 @@
 #include <windows.system.h>
 #include <stdbool.h>
 #include <math.h>
-#include "../add.h"
+#include "add.h"
 
 struct my_swap
 {
@@ -273,14 +273,19 @@ void add_one(int* num) {
 	*num = *num + 1;
 }
 
+void print_int(unsigned int num) {
+	if (num > 9) {
+		print_int(num / 10);
+	}
+	printf("%d ", num % 10);
+}
+
 int main() {
 	system("chcp 65001");
 	setlocale(LC_ALL, "chs");
 	//??
-	printf("%d", 43);
-	if (is_prime(101)) {
-		printf("yes\n");
-	}
-	printf("%d", Add(5, 6));
+	unsigned int n = 0;
+	int a = scanf("%u", &n);
+	print_int(n);
 	return 0;
 };
