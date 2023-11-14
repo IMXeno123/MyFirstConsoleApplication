@@ -280,12 +280,26 @@ void print_int(unsigned int num) {
 	printf("%d ", num % 10);
 }
 
+int my_strlen(char* n) {
+	if (*n != '\0') {
+		return 1 + my_strlen(n+1);
+	}
+	return 0;
+}
+
+void hehe() {
+	int a = 1;
+	int* aa = &a;
+	printf("%d\n", *aa);
+	printf("%p\n", (void*)aa);
+	printf("%p\n", (void*)&aa);
+
+
+}
 int main() {
 	system("chcp 65001");
 	setlocale(LC_ALL, "chs");
 	//??
-	unsigned int n = 0;
-	int a = scanf("%u", &n);
-	print_int(n);
+	hehe();
 	return 0;
 };
