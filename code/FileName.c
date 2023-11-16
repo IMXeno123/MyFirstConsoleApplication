@@ -296,10 +296,45 @@ void hehe() {
 
 
 }
+void inputchararr() {
+	int arr[100] = { 0 };
+	int i = 0;
+	int count = 0;
+	for (i = 0;i < 100;i++) {
+		int a = scanf("%d", &arr[i]);
+
+		if (arr[i] == 0) {
+			break;
+		}
+	}
+	i = 0;
+	while (arr[i] != 0) {
+		count++;
+		i++;
+	}
+	for (i = 0;i < count;i++) {
+		printf("%d ", arr[i]);
+	}
+}
+
+void timestab() {
+	int i = 0;
+	int j = 0;
+	for (i = 1;i <= 9;i++) {
+		for (j = 1;j <= i;j++) {
+			printf("%d*%d=%d\t", i, j, i * j);
+			if (i == j) {
+				printf("\n");
+
+			}
+		}
+	}
+}
+
 int main() {
 	system("chcp 65001");
 	setlocale(LC_ALL, "chs");
 	//??
-	hehe();
+	timestab();
 	return 0;
 };
