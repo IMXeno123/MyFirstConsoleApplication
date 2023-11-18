@@ -336,10 +336,26 @@ void njd() {
 	printf("%s", text);
 }
 
+void move_left()
+{
+	int a = -7;
+	int b = a << 1;
+	printf("a=%d\n", a);
+	printf("b=%d\n", b);
+}
+
+void move_right()
+{
+	int a = 7;
+	int b = a >> 1;
+	printf("a=%d\n", a);
+	printf("b=%d\n", b);
+}
+
 int main() {
 	system("chcp 65001");
 	setlocale(LC_ALL, "chs");
 	//??
-	njd();
+	move_right();
 	return 0;
 };
