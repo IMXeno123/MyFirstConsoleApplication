@@ -331,10 +331,15 @@ void timestab() {
 	}
 }
 
+void njd() {
+	char text[] = "fuck";
+	printf("%s", text);
+}
+
 int main() {
 	system("chcp 65001");
 	setlocale(LC_ALL, "chs");
 	//??
-	timestab();
+	njd();
 	return 0;
 };
