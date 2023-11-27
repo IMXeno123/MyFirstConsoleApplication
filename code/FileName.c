@@ -346,8 +346,18 @@ void move_left()
 
 void move_right()
 {
-	int a = 7;
+	int a = -7;
 	int b = a >> 1;
+	printf("a=%d\n", a);
+	printf("b=%d\n", b);
+}
+
+void a_to_b() {
+	int a = 5;
+	int b = 10;
+	a = a ^ b;
+	b = a ^ b;
+	a = a ^ b;
 	printf("a=%d\n", a);
 	printf("b=%d\n", b);
 }
@@ -356,6 +366,6 @@ int main() {
 	system("chcp 65001");
 	setlocale(LC_ALL, "chs");
 	//??
-	move_right();
+	a_to_b();
 	return 0;
 };
